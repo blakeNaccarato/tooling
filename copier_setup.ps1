@@ -1,0 +1,1 @@
+copier gh:blakeNaccarato/copier-python . -r HEAD -x ".github/dependabot.yml" -f
