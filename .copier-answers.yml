@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 0.0.4
+_commit: 0.0.4-1-g9ccff27
 _src_path: gh:blakeNaccarato/copier-python
 github_repo_name: tooling
 project_email: blake.naccarato+dev@gmail.com
