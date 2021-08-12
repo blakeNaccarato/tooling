@@ -1,0 +1,7 @@
+{
+  "repository": "github:blakeNaccarato/tooling",
+  "license": "MIT",
+  "devDependencies": {
+    "pyright": "~1.1"
+  }
+}
