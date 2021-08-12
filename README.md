@@ -1,3 +1,0 @@
-# Tooling
-
-This project is informed by my Copier template. Dependabot is enabled on this repo, and the requirements files are checked into version control. The workflows and requirements files in this repo will be maintained by Dependabot Pull Requests. These changes can then be manually piped back into the Copier template (or a workflow can be written to automate it). This allows me to leverage Dependabot to update my tooling in one place, and then the latest tooling can be periodically propagated to projects through Copier. All tooling-related dependencies are intentionally added to `.gitignore` in other repos, so that they don't get cluttered with tooling.
