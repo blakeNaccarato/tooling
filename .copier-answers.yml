@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 0.1.1-15-g0420e50
+_commit: 0.1.1-16-g57fab54
 _src_path: gh:blakeNaccarato/copier-python
 github_repo_name: tooling
 gitignore_dependencies: false

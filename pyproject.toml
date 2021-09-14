@@ -8,7 +8,7 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "dummy"
 readme = "README.md"
-authors = [{name = "Blake Naccarato", email = "blake.naccarato+dev@gmail.com"}]
+authors = [{name = "Blake Naccarato", email = "dummy@dummy.dummy"}]
 dynamic = ["version", "description"]
 
 [project.urls]
