@@ -1,9 +1,9 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 0.1.1
+_commit: 0.1.1-15-g0420e50
 _src_path: gh:blakeNaccarato/copier-python
 github_repo_name: tooling
 gitignore_dependencies: false
-project_email: blake.naccarato+dev@gmail.com
+project_email: dummy@dummy.dummy
 project_name: dummy
 project_owner_github_username: blakeNaccarato
 project_owner_name: Blake Naccarato
