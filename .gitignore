@@ -2,6 +2,7 @@
 .vscode/
 .coveragerc
 .flake8
+package.json
 pyrightconfig.json
 pytest.ini
 setup.ps1
