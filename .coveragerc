@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = copier-python-test
+source = copier_python_test
 
 [report]
 
