@@ -1,0 +1,5 @@
+myst-parser~=0.18.0
+sphinx-autodoc-typehints~=1.19.2
+sphinx-book-theme~=0.0.39
+sphinx_design~=0.3.0
+sphinxext-rediraffe~=0.2.7
