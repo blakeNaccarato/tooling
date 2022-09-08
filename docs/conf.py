@@ -1,3 +1,5 @@
+# See: https://github.com/executablebooks/MyST-Parser/blob/master/docs/conf.py
+
 from datetime import date
 
 from myst_parser import __version__
@@ -21,6 +23,7 @@ extensions = [
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_theme = "sphinx_book_theme"
+html_favicon = "_static/favicon.png"
 html_theme_options = {
     "home_page_in_toc": True,
     "github_url": "https://github.com/blakeNaccarato/copier-python-test",
@@ -50,20 +53,7 @@ myst_number_code_blocks = ["typescript"]
 myst_heading_anchors = 2
 myst_footnote_transition = True
 myst_dmath_double_inline = True
-rediraffe_redirects = {
-    "using/intro.md": "sphinx/intro.md",
-    "sphinx/intro.md": "intro.md",
-    "using/use_api.md": "api/index.md",
-    "api/index.md": "api/reference.rst",
-    "using/syntax.md": "syntax/syntax.md",
-    "using/syntax-optional.md": "syntax/optional.md",
-    "using/reference.md": "syntax/reference.md",
-    "sphinx/reference.md": "configuration.md",
-    "sphinx/index.md": "faq/index.md",
-    "sphinx/use.md": "faq/index.md",
-    "sphinx/faq.md": "faq/index.md",
-    "explain/index.md": "develop/background.md",
-}
+rediraffe_redirects = {}
 suppress_warnings = ["myst.strikethrough"]
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3.7", None),
