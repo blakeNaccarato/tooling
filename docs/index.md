@@ -1,3 +1,8 @@
-# Hello
+# Index
 
-Hello
+Index
+
+```{toctree}
+:hidden:
+intro.md
+```
