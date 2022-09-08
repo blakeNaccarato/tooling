@@ -15,51 +15,42 @@ extensions = [
     "myst_parser",
     "sphinx.ext.autodoc",
     "sphinx_autodoc_typehints",
-    "sphinx.ext.intersphinx",
-    "sphinx.ext.viewcode",
     "sphinx_design",
-    "sphinxext.rediraffe",
 ]
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_theme = "sphinx_book_theme"
 html_favicon = "_static/favicon.png"
-html_theme_options = {
-    "home_page_in_toc": True,
-    "github_url": "https://github.com/blakeNaccarato/copier-python-test",
-    "repository_url": "https://github.com/blakeNaccarato/copier-python-test",
-    "repository_branch": "main",
-    "path_to_docs": "docs",
-    "use_repository_button": True,
-    "use_edit_page_button": True,
-}
+html_title = ""
+# html_theme_options = {
+#     "home_page_in_toc": True,
+#     "github_url": "https://github.com/blakeNaccarato/copier-python-test",
+#     "repository_url": "https://github.com/blakeNaccarato/copier-python-test",
+#     "repository_branch": "main",
+#     "path_to_docs": "docs",
+#     "use_repository_button": True,
+#     "use_edit_page_button": True,
+# }
 html_static_path = ["_static"]
-myst_enable_extensions = [
-    "dollarmath",
-    "amsmath",
-    "deflist",
-    "fieldlist",
-    "html_admonition",
-    "html_image",
-    "colon_fence",
-    "smartquotes",
-    "replacements",
-    "linkify",
-    "strikethrough",
-    "substitution",
-    "tasklist",
-]
-myst_number_code_blocks = ["typescript"]
+# myst_enable_extensions = [
+#     "dollarmath",
+#     "amsmath",
+#     "deflist",
+#     "fieldlist",
+#     "html_admonition",
+#     "html_image",
+#     "colon_fence",
+#     "smartquotes",
+#     "replacements",
+#     "linkify",
+#     "strikethrough",
+#     "substitution",
+#     "tasklist",
+# ]
 myst_heading_anchors = 2
 myst_footnote_transition = True
-myst_dmath_double_inline = True
-rediraffe_redirects = {}
-suppress_warnings = ["myst.strikethrough"]
-intersphinx_mapping = {
-    "python": ("https://docs.python.org/3.7", None),
-    "sphinx": ("https://www.sphinx-doc.org/en/master", None),
-    "markdown_it": ("https://markdown-it-py.readthedocs.io/en/latest", None),
-}
+# myst_dmath_double_inline = True
+# suppress_warnings = ["myst.strikethrough"]
 autodoc_member_order = "bysource"
 nitpicky = True
 nitpick_ignore = [
