@@ -1,3 +1,7 @@
+---
+sd_hide_title: true
+---
+
 # Index
 
 Index
