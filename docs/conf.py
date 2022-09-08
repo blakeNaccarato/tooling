@@ -4,7 +4,7 @@ from myst_parser import __version__
 from sphinx.application import Sphinx
 
 project = "copier_python_test"
-copyright = f"{date.today().year}, Executable Book Project"  # noqa: A001
+copyright = f"{date.today().year}, Blake Naccarato"  # noqa: A001
 author = "Blake Naccarato"
 version = __version__
 master_doc = "index"
@@ -23,9 +23,9 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_theme = "sphinx_book_theme"
 html_theme_options = {
     "home_page_in_toc": True,
-    "github_url": "https://github.com/executablebooks/MyST-Parser",
-    "repository_url": "https://github.com/executablebooks/MyST-Parser",
-    "repository_branch": "master",
+    "github_url": "https://github.com/blakeNaccarato/copier-python-test",
+    "repository_url": "https://github.com/blakeNaccarato/copier-python-test",
+    "repository_branch": "main",
     "path_to_docs": "docs",
     "use_repository_button": True,
     "use_edit_page_button": True,
