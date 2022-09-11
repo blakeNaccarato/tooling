@@ -1,3 +1,3 @@
 # Index
 
-Lorem ipsum dolor
+Lorem ipsum
