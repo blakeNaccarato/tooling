@@ -22,3 +22,4 @@ pre-commit~=2.20.0
 keyring~=23.9.0
 
 -r requirements_both.txt
+-r ../../docs/requirements.txt

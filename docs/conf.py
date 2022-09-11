@@ -1,91 +1,15 @@
-# See: https://github.com/executablebooks/MyST-Parser/blob/master/docs/conf.py
-
 from datetime import date
 
 from myst_parser import __version__
-from sphinx.application import Sphinx
 
-project = "copier_python_test"
-copyright = f"{date.today().year}, Blake Naccarato"  # noqa: A001
-author = "Blake Naccarato"
+project = "Project"
+copyright = f"{date.today().year}, Blake Naccarato"
 version = __version__
 master_doc = "index"
 language = "en"
 extensions = [
     "myst_parser",
-    "sphinx.ext.autodoc",
-    "sphinx_autodoc_typehints",
-    "sphinx_design",
+    "sphinx_design"
 ]
-templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_theme = "sphinx_book_theme"
-html_favicon = "_static/favicon.png"
-html_title = ""
-# html_theme_options = {
-#     "home_page_in_toc": True,
-#     "github_url": "https://github.com/blakeNaccarato/copier-python-test",
-#     "repository_url": "https://github.com/blakeNaccarato/copier-python-test",
-#     "repository_branch": "main",
-#     "path_to_docs": "docs",
-#     "use_repository_button": True,
-#     "use_edit_page_button": True,
-# }
-html_static_path = ["_static"]
-# myst_enable_extensions = [
-#     "dollarmath",
-#     "amsmath",
-#     "deflist",
-#     "fieldlist",
-#     "html_admonition",
-#     "html_image",
-#     "colon_fence",
-#     "smartquotes",
-#     "replacements",
-#     "linkify",
-#     "strikethrough",
-#     "substitution",
-#     "tasklist",
-# ]
-myst_heading_anchors = 2
-myst_footnote_transition = True
-# myst_dmath_double_inline = True
-# suppress_warnings = ["myst.strikethrough"]
-autodoc_member_order = "bysource"
-nitpicky = True
-nitpick_ignore = [
-    ("py:class", "docutils.nodes.document"),
-    ("py:class", "docutils.nodes.docinfo"),
-    ("py:class", "docutils.nodes.Element"),
-    ("py:class", "docutils.nodes.Node"),
-    ("py:class", "docutils.nodes.field_list"),
-    ("py:class", "docutils.nodes.problematic"),
-    ("py:class", "docutils.nodes.pending"),
-    ("py:class", "docutils.nodes.system_message"),
-    ("py:class", "docutils.statemachine.StringList"),
-    ("py:class", "docutils.parsers.rst.directives.misc.Include"),
-    ("py:class", "docutils.parsers.rst.Parser"),
-    ("py:class", "docutils.utils.Reporter"),
-    ("py:class", "nodes.Element"),
-    ("py:class", "nodes.Node"),
-    ("py:class", "nodes.system_message"),
-    ("py:class", "Directive"),
-    ("py:class", "Include"),
-    ("py:class", "StringList"),
-    ("py:class", "DocutilsRenderer"),
-    ("py:class", "MockStateMachine"),
-]
-
-
-def setup(app: Sphinx):
-    """Add functions to the Sphinx setup."""
-    from myst_parser._docs import (
-        DirectiveDoc,
-        DocutilsCliHelpDirective,
-        MystConfigDirective,
-    )
-
-    app.add_css_file("custom.css")
-    app.add_directive("myst-config", MystConfigDirective)
-    app.add_directive("docutils-cli-help", DocutilsCliHelpDirective)
-    app.add_directive("doc-directive", DirectiveDoc)

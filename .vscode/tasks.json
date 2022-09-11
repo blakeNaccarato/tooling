@@ -6,6 +6,18 @@
   "version": "2.0.0",
   "tasks": [
     // * -------------------------------------------------------------------------- * //
+    // * PROJECT-SPECIFIC * //
+    {
+      "label": "task: sphinx-autobuild",
+      "type": "process",
+      "command": "pwsh",
+      "args": [
+        "-Command",
+        "sphinx-autobuild --re-ignore _build/.* --open-browser -n -b html docs/ docs/_build/html"
+      ],
+      "problemMatcher": []
+    },
+    // * -------------------------------------------------------------------------- * //
     // * GIT * //
     {
       "label": "git: Rebase back to fork",
