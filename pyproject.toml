@@ -5,7 +5,7 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "copier_python_test"
 requires-python = ">=3.10"
-dependencies = [ "dvc[gs]~=2.29.0",]
+dependencies = [ "dvc[gs]~=2.30.0",]
 readme = "README.md"
 dynamic = [ "version", "description",]
 [[project.authors]]
