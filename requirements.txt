@@ -1,2 +1,2 @@
 # List project dependencies here. A workflow ports them to `pyproject.toml`. This is needed because Dependabot does not currently support `flit`-flavored `pyproject.toml`.
-dvc[gs]~=2.35.1
+dvc[gs]~=2.36.0
