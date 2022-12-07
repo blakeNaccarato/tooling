@@ -6,18 +6,6 @@
   "version": "2.0.0",
   "tasks": [
     // * -------------------------------------------------------------------------- * //
-    // * PROJECT-SPECIFIC * //
-    {
-      "label": "task: sphinx-autobuild",
-      "type": "process",
-      "command": "pwsh",
-      "args": [
-        "-Command",
-        "sphinx-autobuild --re-ignore _build/.* --open-browser -n -b html docs/ docs/_build/html"
-      ],
-      "problemMatcher": []
-    },
-    // * -------------------------------------------------------------------------- * //
     // * GIT * //
     {
       "label": "git: Rebase back to fork",
@@ -66,6 +54,13 @@
     // * OTHER TASKS * //
 
     {
+      "label": "task: sphinx-autobuild",
+      "type": "process",
+      "command": "pwsh",
+      "args": ["-Command", "sphinx-autobuild docs _site"],
+      "problemMatcher": []
+    },
+    {
       "label": "task: snakeviz",
       "type": "process",
       "command": "pwsh",
@@ -86,7 +81,7 @@
       "label": "task: pytest-cov: Generate coverage",
       "type": "process",
       "command": "pwsh",
-      "args": ["-Command", "pytest -c pytest_local.ini --cov --cov-report xml"],
+      "args": ["-Command", "pytest --cov --cov-report xml"],
       "problemMatcher": []
     },
     {

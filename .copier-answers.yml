@@ -1,9 +1,10 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 3395d86
+_commit: 960e79c
 _src_path: gh:blakeNaccarato/copier-python
 github_repo_name: copier-python-test
 include_funding: true
 override: false
+override_cicd_setup: false
 override_codecov: false
 override_coveragerc: false
 override_env: false
