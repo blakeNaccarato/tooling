@@ -10,7 +10,7 @@ debugpy~=1.6.4
 rich~=12.6.0
 
 # Format
-autoflake~=1.4
+autoflake~=2.0
 black~=22.12.0  # doesn't follow semver
 
 # Lint
@@ -21,7 +21,7 @@ flake8-codes~=0.2.2  # flake8 error code introspection
 snakeviz~=2.1.1
 
 # Pre-commit
-pre-commit~=2.20.0
+pre-commit~=2.21.0
 
 # For local publishing to PyPi with flit
 keyring~=23.13.1
