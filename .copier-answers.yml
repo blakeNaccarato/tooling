@@ -1,6 +1,7 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 49b8ccf
+_commit: a7c01ec
 _src_path: gh:blakeNaccarato/copier-python
+actions_runner: ubuntu-latest
 github_repo_name: copier-python-test
 include_funding: true
 override: false
