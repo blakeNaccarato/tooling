@@ -1,17 +1,12 @@
+name: "test"
+
 on:
   workflow_dispatch:
   push:
     branches: ["main"]
 
 jobs:
-  hello_world_job:
-    runs-on: ubuntu-latest
-    name: A job to say hello
+  test:
+    runs-on: "ubuntu-latest"
     steps:
-      - uses: actions/checkout@v3
-      - id: foo
-        uses: blakeNaccarato/copier-python-workflow-setup@v0.0.3
-        with:
-          who-to-greet: "Mona the Octocat"
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
+      - uses: blakeNaccarato/copier-python-workflow-setup@v0.0.3
