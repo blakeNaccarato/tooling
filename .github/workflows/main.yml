@@ -11,18 +11,24 @@ jobs:
   flake8:
     runs-on: "ubuntu-latest"
     steps:
-      - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.6"
+      - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.7"
+        with:
+          python-version: "3.10"
       - run: "flake8"
 
   pyright:
     runs-on: "ubuntu-latest"
     steps:
-      - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.6"
+      - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.7"
+        with:
+          python-version: "3.10"
       - run: "pyright"
 
   pytest-cov:
     runs-on: "ubuntu-latest"
     steps:
-      - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.6"
+      - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.7"
+        with:
+          python-version: "3.10"
       - run: "pytest --cov"
       - uses: "codecov/codecov-action@v3.1.1"
