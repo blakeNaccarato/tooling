@@ -1,6 +1,5 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: d613026
-_src_path: gh:blakeNaccarato/copier-python
+_src_path: template
 actions_runner: ubuntu-latest
 github_repo_name: copier-python-test
 include_funding: true
@@ -26,6 +25,6 @@ project_email: blake.naccarato+copier-python-test@gmail.com
 project_name: copier_python_test
 project_owner_github_username: blakeNaccarato
 project_owner_name: Blake Naccarato
-python_version: "3.11"
+python_version: '3.11'
 use_dvc: true
 year_of_project_creation: 2022
