@@ -8,7 +8,7 @@ on:
     branches: ["main"]
 
 jobs:
-  changed:
+  changes:
     runs-on: "ubuntu-latest"
     steps:
       - uses: "actions/checkout@v3"
@@ -18,8 +18,8 @@ jobs:
             template:
               - "template/**"
   bump_template:
-    needs: "changed"
-    if: "${{ needs.changed.outputs.template == 'true' }}"
+    needs: "changes"
+    if: "${{ needs.changes.outputs.template == 'true' }}"
     runs-on: "ubuntu-latest"
     steps:
       - uses: "actions/checkout@v3"
