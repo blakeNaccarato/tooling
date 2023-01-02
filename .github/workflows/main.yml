@@ -10,10 +10,6 @@ on:
 jobs:
   changed:
     runs-on: "ubuntu-latest"
-    permissions:
-      pull-requests: "read"
-    outputs:
-      pull_request_: "${{ steps.filter.outputs.template }}"
     steps:
       - uses: "actions/checkout@v3"
       - uses: "dorny/paths-filter@v2"
