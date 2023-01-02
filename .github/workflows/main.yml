@@ -8,23 +8,22 @@ on:
     branches: ["main"]
 
 jobs:
-  template_changed:
+  changed:
     runs-on: "ubuntu-latest"
     permissions:
       pull-requests: "read"
     outputs:
-      pull_request_: "${{ steps.filter.outputs.template_changed }}"
+      pull_request_: "${{ steps.filter.outputs.template }}"
     steps:
       - uses: "actions/checkout@v3"
       - uses: "dorny/paths-filter@v2"
-        id: "filter"
         with:
           filters: |
-            template_changed:
-              - "template"
+            template:
+              - "template/**"
   bump_template:
-    needs: "template_changed"
-    if: "${{ needs.template_changed.outputs.template_changed == 'true' }}"
+    needs: "changed"
+    if: "${{ needs.changed.outputs.template == 'true' }}"
     runs-on: "ubuntu-latest"
     steps:
       - uses: "actions/checkout@v3"
