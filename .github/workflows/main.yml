@@ -19,7 +19,7 @@ jobs:
               - "template/**"
   bump_template:
     needs: "changes"
-    if: "${{ needs.changes.outputs.template == 'true' }}"
+    if: ${{ needs.changes.outputs.template == "true" }}
     runs-on: "ubuntu-latest"
     steps:
       - uses: "actions/checkout@v3"
