@@ -12,22 +12,22 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - uses: "actions/checkout@v3"
-      - id: filter 
+      - id: filter
         uses: "dorny/paths-filter@v2"
         with:
           filters: |
             template:
               - "template/**"
     outputs:
-      template: ${{ steps.filter.outputs.template }}
+      template: "${{ steps.filter.outputs.template }}"
   bump_template:
     needs: "changes"
     if: "${{ needs.changes.outputs.template == 'true' }}"
     runs-on: "ubuntu-latest"
+    permissions:
+      actions: "write"
     steps:
       - uses: "actions/checkout@v3"
-        with:
-          submodules: true
       - uses: "actions/setup-python@v4"
         with:
           python-version: "3.11"
@@ -38,33 +38,31 @@ jobs:
           copier -f
       - uses: "stefanzweifel/git-auto-commit-action@v4"
         with:
-          commit_message: "Bump `copier-python` template"
+          commit_message: "Update repo to latest template"
   flake8:
     needs: "bump_template"
-    if: "${{ always() }}"
+    if: "${{ !failure() }}"
     runs-on: "ubuntu-latest"
     steps:
-      - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.7"
+      - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.8"
         with:
           python-version: "3.11"
       - run: "flake8"
-
   pyright:
     needs: "bump_template"
-    if: "${{ always() }}"
+    if: "${{ !failure() }}"
     runs-on: "ubuntu-latest"
     steps:
-      - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.7"
+      - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.8"
         with:
           python-version: "3.11"
       - run: "pyright"
-
   pytest-cov:
     needs: "bump_template"
-    if: "${{ always() }}"
+    if: "${{ !failure() }}"
     runs-on: "ubuntu-latest"
     steps:
-      - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.7"
+      - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.8"
         with:
           python-version: "3.11"
       - run: "pytest --cov"
