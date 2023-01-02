@@ -33,13 +33,13 @@ jobs:
           python -m pip install -U pip
           pip install -U setuptools wheel
           pip install copier
-          copier -f
+          copier -f -r $(git rev-parse HEAD:template)
       - uses: "stefanzweifel/git-auto-commit-action@v4"
         with:
           commit_message: "Update repo to latest template"
   flake8:
     needs: "bump_template"
-    if: "${{ !failure() }}"
+    if: "${{ always() }}"
     runs-on: "ubuntu-latest"
     steps:
       - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.8"
@@ -48,7 +48,7 @@ jobs:
       - run: "flake8"
   pyright:
     needs: "bump_template"
-    if: "${{ !failure() }}"
+    if: "${{ always() }}"
     runs-on: "ubuntu-latest"
     steps:
       - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.8"
@@ -57,7 +57,7 @@ jobs:
       - run: "pyright"
   pytest-cov:
     needs: "bump_template"
-    if: "${{ !failure() }}"
+    if: "${{ always() }}"
     runs-on: "ubuntu-latest"
     steps:
       - uses: "blakeNaccarato/copier-python-workflow-setup@v0.0.8"
