@@ -1,2 +1,5 @@
+import copier_python_test
+
+
 def test():
-    pass
+    copier_python_test.__version__
