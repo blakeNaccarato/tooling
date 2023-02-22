@@ -40,6 +40,14 @@
       "problemMatcher": []
     },
     {
+      "label": "setup: Bump template",
+      "type": "process",
+      "command": "pwsh",
+      "args": ["copier -f -r $(git rev-parse HEAD:template)"],
+      "icon": { "id": "folder" },
+      "problemMatcher": []
+    },
+    {
       "label": "setup: Setup project",
       "type": "process",
       "command": "pwsh",
@@ -53,6 +61,9 @@
       "command": "pwsh",
       "args": ["update.ps1"],
       "icon": { "id": "folder" },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
       "problemMatcher": []
     },
 
@@ -69,7 +80,6 @@
 
     // * -------------------------------------------------------------------------- * //
     // * OTHER TASKS * //
-
     {
       "label": "task: sphinx-autobuild docs (preview)",
       "type": "process",
@@ -78,6 +88,7 @@
       "icon": { "id": "book" },
       "problemMatcher": []
     },
+
     {
       "label": "task: snakeviz",
       "type": "process",
