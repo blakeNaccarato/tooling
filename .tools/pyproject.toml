@@ -1,0 +1,23 @@
+[tool.ruff]
+fix = true
+select = ["ALL"]
+src = ["src", "tests"]
+target-version = "py311"
+extend-exclude = ["template", "typings", ".github", ".tools", ".venv"]
+ignore = [
+    "ANN201", # Don't require return type annotations on public objects
+    "COM",    # Allow magic commas and magic missing commas
+    "D10",    # Don't require docstrings
+    "D203",   # Don't require 1 blank line before class docstring
+    "D213",   # Don't require multi-line docstring summary to start at the second line
+    "DTZ",    # Timezones are important, but only contextually necessary.
+    "ERA",    # Don't remove commented out code
+    "E501",   # Don't warn about line length. Black enforces this
+    "INP001", # False positive. Check for packages missing `__init__.py`
+]
+
+[tool.ruff.flake8-bugbear]
+extend-immutable-calls = ["typer.Argument", "typer.Option"]
+
+[tool.ruff.pep8-naming]
+classmethod-decorators = ["pydantic.validator"]

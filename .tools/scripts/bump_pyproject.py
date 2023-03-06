@@ -4,19 +4,28 @@ from pathlib import Path
 
 import toml
 
-REQUIREMENTS = Path("requirements.txt")
 PYPROJECT = Path("pyproject.toml")
+REQUIREMENTS = Path("requirements.txt")
+PYPROJECT_TOOLS = Path(".tools") / PYPROJECT
 
-with Path(REQUIREMENTS).open() as file:
-    dependencies = [
-        line.rstrip().replace("==", ">=")
-        for line in file
-        if line != "\n" and not line.startswith("#")
-    ]
+requirements = REQUIREMENTS.read_text(encoding="utf-8").splitlines()
+dependencies = [
+    line.rstrip().replace("==", ">=")
+    for line in requirements
+    if line != "\n" and not line.startswith("#")
+]
 
-with Path(PYPROJECT).open() as file:
-    content = toml.load(file)
-    content["project"]["dependencies"] = dependencies
+content = toml.loads(PYPROJECT.read_text(encoding="utf-8"))
+content["project"]["dependencies"] = dependencies
 
-with Path(PYPROJECT).open("w") as file:
-    toml.dump(content, file)
+PYPROJECT.write_text(
+    encoding="utf-8",
+    data=(
+        "\n".join(
+            (
+                toml.dumps(content),
+                PYPROJECT_TOOLS.read_text(encoding="utf-8"),
+            )
+        )
+    ),
+)
