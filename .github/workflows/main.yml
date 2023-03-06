@@ -12,9 +12,9 @@ jobs:
         with:
           filters: |
             project:
-              - "requirements.txt",
-              - ".tools/pyproject.toml",
-              - .tools/scripts/bump_pyproject.py,
+              - "requirements.txt"
+              - ".tools/pyproject.toml"
+              - .tools/scripts/bump_pyproject.py
             template:
               - "template/**"
     outputs:
