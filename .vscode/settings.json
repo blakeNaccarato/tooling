@@ -43,7 +43,7 @@
     "first-line-heading": false
   },
 
-  //* black, flake8, isort
+  //* black, ruff
   "black-formatter.importStrategy": "fromEnvironment",
   "black-formatter.args": [],
   "flake8.importStrategy": "fromEnvironment",
