@@ -12,11 +12,11 @@ jobs:
         with:
           filters: |
             project:
-              - "requirements.txt"
-              - ".tools/pyproject.toml"
+              - requirements.txt
+              - .tools/pyproject.toml
               - .tools/scripts/bump_pyproject.py
             template:
-              - "template/**"
+              - template/**
     outputs:
       template: "${{ steps.filter.outputs.template }}"
   bump_project:

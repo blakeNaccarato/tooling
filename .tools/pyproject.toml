@@ -5,7 +5,7 @@ src = ["src", "tests"]
 target-version = "py311"
 extend-exclude = ["template", "typings", ".github", ".tools", ".venv"]
 ignore = [
-    "ANN201", # HELLO Don't require return type annotations on public objects
+    "ANN201", # HELLO2 Don't require return type annotations on public objects
     "COM",    # Allow magic commas and magic missing commas
     "D10",    # Don't require docstrings
     "D203",   # Don't require 1 blank line before class docstring
