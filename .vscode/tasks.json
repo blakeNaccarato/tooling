@@ -22,6 +22,14 @@
       "problemMatcher": []
     },
     {
+      "label": "setup: Compose pyproject.toml",
+      "type": "process",
+      "command": "pwsh",
+      "args": ["-Command", "python .tools/scripts/compose_pyproject.py"],
+      "icon": { "id": "file-symlink-directory" },
+      "problemMatcher": []
+    },
+    {
       "label": "setup: Re-answer template questions",
       "type": "process",
       "command": "pwsh",
@@ -71,7 +79,7 @@
     // * -------------------------------------------------------------------------- * //
     // * PRE-COMMIT * //
     {
-      "label": "pre-commit",
+      "label": "pre-commit: all",
       "type": "process",
       "command": "pwsh",
       "args": ["-Command", "pre-commit"],
