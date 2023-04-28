@@ -1,5 +1,3 @@
-import copier_python_test
-
-
-def test():
-    copier_python_test.__version__
+def test_import():
+    """Trivial test that the package is importable."""
+    import copier_python_test  # noqa: F401
