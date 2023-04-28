@@ -1,3 +1,3 @@
 # copier_python_test
 
-Long description of your project.
+Example/test repo for [blakeNaccarato/copier-python](https://github.com/blakeNaccarato/copier-python).
