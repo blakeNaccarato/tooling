@@ -12,7 +12,7 @@ classifiers = [ "License :: OSI Approved :: MIT License",]
 dependencies = []
 [[project.authors]]
 name = "Blake Naccarato"
-email = "blake.naccarato+copier-python-test@gmail.com"
+email = "blake.naccarato@gmail.com"
 
 [project.license]
 file = "LICENSE"
