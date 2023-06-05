@@ -20,8 +20,8 @@ classifiers = ["License :: OSI Approved :: MIT License"]
 name = "Blake Naccarato"
 email = "blake.naccarato@gmail.com"
 [project.urls]
-Changes = "https://github.com/blakeNaccarato/copier-python-test/changelog.html"
-Docs = "https://github.com/blakeNaccarato.github.io/copier-python-test"
+Changes = "https://blakeNaccarato.github.io/copier-python-test/changelog.html"
+Docs = "https://blakeNaccarato.github.io/copier-python-test"
 Home = "https://github.com/blakeNaccarato/copier-python-test"
 Tracker = "https://github.com/blakeNaccarato/copier-python-test/issues"
 
