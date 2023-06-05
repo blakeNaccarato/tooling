@@ -18,8 +18,8 @@ email = "blake.naccarato@gmail.com"
 file = "LICENSE"
 
 [project.urls]
-Changes = "https://github.com/blakeNaccarato/copier-python-test/changelog.html"
-Docs = "https://github.com/blakeNaccarato.github.io/copier-python-test"
+Changes = "https://blakeNaccarato.github.io/copier-python-test/changelog.html"
+Docs = "https://blakeNaccarato.github.io/copier-python-test"
 Home = "https://github.com/blakeNaccarato/copier-python-test"
 Tracker = "https://github.com/blakeNaccarato/copier-python-test/issues"
 
