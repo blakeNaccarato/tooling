@@ -9,7 +9,8 @@ ci:
 repos:
   - repo: "meta"
     hooks:
-      - id: "check-hooks-apply"
+      # # ? Enable this to ensure each hook runs against at least one file
+      # - id: "check-hooks-apply"
       - id: "check-useless-excludes"
   - repo: "local"
     hooks:
@@ -18,6 +19,7 @@ repos:
 
       # * -------------------------------------------------------------------------- * #
       # * Changes below may be lost in significant template updates.
+
       - id: "compose-pyproject"
         name: "compose-pyproject"
         fail_fast: true
