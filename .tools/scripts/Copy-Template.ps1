@@ -18,6 +18,6 @@ else {
     git add --all
     git commit -m "Update template digest to $(git rev-parse --short HEAD:template)"
     git submodule deinit template
-    copier update --vcs-ref $(git rev-parse HEAD:template) $(if ($Defaults) { '--defaults' })
+    copier update $(if ($Defaults) { '--defaults' })
 }
 python '.tools/scripts/compose_pyproject.py'
