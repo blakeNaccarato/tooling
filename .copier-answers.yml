@@ -1,10 +1,10 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 8b71f02
+_commit: f0d6311
 _src_path: gh:blakeNaccarato/copier-python
 actions_runner: ubuntu-latest
 active: false
 github_repo_name: copier-python-test
-project_description: Example/test repo for blakeNaccarato/copier-python
+project_description: Test of blakeNaccarato/copier-python.
 project_email: blake.naccarato@gmail.com
 project_name: copier_python_test
 project_owner_github_username: blakeNaccarato
