@@ -29,9 +29,9 @@ Home = "https://github.com/blakeNaccarato/copier-python-test"
 Tracker = "https://github.com/blakeNaccarato/copier-python-test/issues"
 
 [tool.fawltydeps]
-ignore_undeclared = ["rich"]
-ignore_unused = []
-
+output_format = "human_detailed"
+code = ["src"]
+deps = ["pyproject.toml"]
 [tool.fawltydeps.custom_mapping]
 ipykernel = ["IPython"]
 
@@ -45,6 +45,8 @@ ipykernel = ["IPython"]
 
 # Paths
 include = ["src", "tests", "docs"]
+# Stubs
+stubPath = "submodules/typings"
 # Type inference helps with untyped upstream but can be unpredictable
 useLibraryCodeForTypes = true
 # Sets most checks to "error". See overrides below
@@ -84,11 +86,13 @@ reportUnnecessaryTypeIgnoreComment = "none"
 reportUnusedCallResult = "none"
 
 [tool.ruff]
+include = ["*.py", "*.pyi", "**/pyproject.toml", "*.ipynb"]
 fix = true
+cache-dir = ".cache/.ruff_cache"
 select = ["ALL"]
 src = ["src", "tests"]
 target-version = "py311"
-extend-exclude = ["template", "typings", ".github"]
+extend-exclude = ["template", "submodules", ".github"]
 ignore = [
     # * ---------------------------------------------------------------------------- * #
     # * Changes below should persist in significant template updates.
@@ -148,16 +152,15 @@ unfixable = [
     "F601", # Don't fix duplicate mapping keys
 ]
 
-[tool.ruff.pydocstyle]
-convention = "google"
+[tool.ruff.format]
+preview = true
+skip-magic-trailing-comma = true
 
 [tool.ruff.isort]
-# * ---------------------------------------------------------------------------- * #
-# * Changes below should persist in significant template updates.
-
-# * ---------------------------------------------------------------------------- * #
-# * Changes below may be lost in significant template updates.
 split-on-trailing-comma = false
+
+[tool.ruff.pydocstyle]
+convention = "google"
 
 [tool.ruff.per-file-ignores]
 "docs/**" = [
